@@ -1,0 +1,25 @@
+
+wl: "cancer,expired,thinner,hypoglycemia,vaccination"
+
+model_type:  'tfidf'
+
+#input_dir: '/home/gy654/Documents/API_testing/input_dir/'
+input_dir: '/home/gy654/Documents/API_test2/input_dir/'
+
+#model_path: '/home/gy654/Documents/text_classification/model/distribution_shift/OO/checkpoint-11535'
+model_path: '/home/gy654/Documents/text_classification/experiments/sensitivity_analysis/tfidf_model/tfidf_model.joblib'
+
+pretrain_path: "emilyalsentzer/Bio_ClinicalBERT"
+
+
+#mid_dir: '/home/gy654/Documents/API_testing/mid_dir/'
+mid_dir: 'default'
+
+#output_dir: '/home/gy654/Documents/API_testing/output_dir/'
+output_dir: 'default'
+
+M: 'default'
+
+multiple_swap: True
+
+calibrate: 'default'
