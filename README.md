@@ -73,9 +73,8 @@ calibrate: 'default'
 
 Installation:
 
-1. `git clone git@github.com:willwhitney/reprieve.git`
+1. `git clone git@github.com:nyuolab/Model_Sensitivity.git`
 2. Go install the [Dependencies](https://github.com/willwhitney/reprieve/blob/master/readme.md#dependencies). Since installations of Pytorch and JAX are both highly context-dependent, I won't include an install script.
-3. `cd reprieve`
 4. `pip install -e .`
 
 Dependencies:
