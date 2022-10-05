@@ -87,6 +87,7 @@ def agreement_rate_tfidf(pred_dict):
     first_line = l1_matrix[0]
     return first_line
 
+
 def generate_pred_finetune(e, checkpoint_path, complete_df):
     m = e.M
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
@@ -118,7 +119,7 @@ def generate_pred_finetune(e, checkpoint_path, complete_df):
     pred_dict = {}
     for i in range(1, m+2):
         pred_dict['pred'+str(i)] = list(chain(*result_dict['result'+str(i)]))
-        pred_dict['pred'+str(i)] = [[pred_dict['pred'+str(i)][j]['score'] for j in range(len(pred_dict['pred'+str(i)]))]]
+        pred_dict['pred'+str(i)] = [[1-pred_dict['pred'+str(i)][j]['score'] if pred_dict['pred'+str(i)][j]['label']=='LABEL_0' else pred_dict['pred'+str(i)][j]['score']  for j in range(len(pred_dict['pred'+str(i)]))]]
     
     return pred_dict
     
