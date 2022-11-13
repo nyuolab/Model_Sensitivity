@@ -1,3 +1,8 @@
+# Contacting the Authors
+Grace Yang: gy654@nyu.edu
+Ming Cao: mc7787@nyu.edu
+
+
 # Model_Sensitivity
 
 Sensitivity: a library for evaluating a nlp classification model's sensitivity score to a word.
